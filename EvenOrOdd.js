@@ -1,4 +1,4 @@
-//check if number is even or odd
+//----- check if number is even or odd --------------------------------
 
 // function evenOrOdd(inputNumber) {
 //     if (!isFinite(inputNumber)) return 'incorrectNumber'
