@@ -11,7 +11,6 @@ function capitalizeString(input) {
         s === ' ' ? previousIsSpace = true : previousIsSpace = false
         output = output + s
     }
-
     return output
 }
 
