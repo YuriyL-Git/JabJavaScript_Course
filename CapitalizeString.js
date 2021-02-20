@@ -1,8 +1,23 @@
-//capitalize every word in input string
+//Capitalize first letter of every word in the string:
 
-function capitalizeStr(input) {
+function capitalizeString(input) {
+    if (typeof input !== 'string') return 'Incorrect string!'
 
+    let output = ''
+    let previousIsSpace = true
+
+    for (let s of input) {
+        if (previousIsSpace) s = s.toUpperCase()
+        s === ' ' ? previousIsSpace = true : previousIsSpace = false
+        output = output + s
+    }
+
+    return output
 }
+
+
+
+// --- Tests -----
 
 const tests = []
 
@@ -17,4 +32,7 @@ tests[3] = 'a'
 
 tests[4] = 'a B'
 
-tests.forEach(t => console.log(capitalizeStr(t)))
+tests[5] = ' a aab  ff'
+
+
+tests.forEach(t => console.log(capitalizeString(t)))
